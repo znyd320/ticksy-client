@@ -1,0 +1,10 @@
+export const UrlUser = () => "/users";
+export const UrlCategory = () => "/category";
+export const UrlProRequest = () => "/pro-request";
+export const UrlFinance = () => "/finance";
+export const UrlDashboard = () => "/dashboard";
+export const UrlPriceCreate = () => "/price-create";
+export const UrlNotification = () => "/notification";
+export const UrlSettings = () => "/settings";
+export const UrlNotificationSend = () => "/notification-send";
+// export const UrlSettings = () => "/settings";
