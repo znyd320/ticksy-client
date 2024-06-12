@@ -11,113 +11,120 @@ import { Link, useLocation } from "react-router-dom";
 import { logOutState } from "../../features/auth/auth";
 
 import {
-  UrlCategory,
-  UrlDashboard,
-  UrlFinance,
-  UrlNotification,
-  UrlPriceCreate,
-  UrlProRequest,
-  UrlUser,
+	UrlCategory,
+	UrlDashboard,
+	UrlFinance,
+	UrlNotification,
+	UrlPriceCreate,
+	UrlProRequest,
+	UrlUser,
 } from "../../router/url";
 
-function CustomSidebar({ setOpen }: any) {
-  const dispatch = useDispatch();
+// custom sidebar props type
+interface CustomSidebarProps {
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-  const handleLogOut = () => {
-    console.log("Hello");
+function CustomSidebar({ setOpen }: CustomSidebarProps) {
+	const dispatch = useDispatch();
 
-    localStorage.removeItem("rekoul_token");
-    localStorage.removeItem("rekoul_user");
-    dispatch(logOutState());
-  };
+	const handleLogOut = () => {
+		// console.log("Hello");
 
-  return (
-    <div className="absolute z-50 md:relative xl:h-screen lg:h-screen md:max-h-none h-screen border-r md:border-none">
-      <Sidebar
-        aria-label="Sidebar with logo branding example"
-        className="relative"
-      >
-        <div className="flex gap-2 items-center border-b pb-2 mb-1">
-          <img
-            src="https://i.ibb.co/fMz0c1s/Vector.png"
-            alt="logo"
-            className="h-[45px] w-[40px]"
-          />
-          <h1 className="text-xl font-bold">Rekoul Admin</h1>
+		localStorage.removeItem("rekoul_token");
+		localStorage.removeItem("rekoul_user");
+		dispatch(logOutState());
+	};
 
-          <FaTimes
-            size={20}
-            className="ml-5 md:hidden"
-            onClick={() => setOpen(false)}
-          />
-        </div>
+	return (
+		<div className="absolute z-50 md:relative xl:h-screen lg:h-screen md:max-h-none h-screen border-r md:border-none">
+			<Sidebar
+				aria-label="Sidebar with logo branding example"
+				className="relative"
+			>
+				<div className="flex gap-2 items-center border-b pb-2 mb-1">
+					<img
+						src="https://i.ibb.co/fMz0c1s/Vector.png"
+						alt="logo"
+						className="h-[45px] w-[40px]"
+					/>
+					<h1 className="text-xl font-bold">Rekoul Admin</h1>
 
-        <>
-          <ul className="w-full">
-            <List link={UrlDashboard()} title="Dashboard">
-              <MdDashboard size={18} />
-            </List>
-            <List link={UrlUser()} title="All Users">
-              <FaUsers size={18} />
-            </List>
-            <List link={UrlProRequest()} title="Pro Users">
-              <FaUserCheck size={18} />
-            </List>
+					<FaTimes
+						size={20}
+						className="ml-5 md:hidden"
+						onClick={() => setOpen(false)}
+					/>
+				</div>
 
-            <List link={UrlFinance()} title="Finance">
-              <HiMiniBanknotes size={18} />
-            </List>
+				<>
+					<ul className="w-full">
+						<List link={UrlDashboard()} title="Dashboard">
+							<MdDashboard size={18} />
+						</List>
+						<List link={UrlUser()} title="All Users">
+							<FaUsers size={18} />
+						</List>
+						<List link={UrlProRequest()} title="Pro Users">
+							<FaUserCheck size={18} />
+						</List>
 
-            <List link={UrlPriceCreate()} title="Price Create">
-              <MdOutlinePriceCheck size={18} />
-            </List>
+						<List link={UrlFinance()} title="Finance">
+							<HiMiniBanknotes size={18} />
+						</List>
 
-            <List link={UrlCategory()} title="Category">
-              <MdCategory size={18} />
-            </List>
-            <List link={UrlNotification()} title="Notification">
-              <IoNotifications size={18} />
-            </List>
-            {/* <List link={UrlSettings()} title="Settings">
+						<List link={UrlPriceCreate()} title="Price Create">
+							<MdOutlinePriceCheck size={18} />
+						</List>
+
+						<List link={UrlCategory()} title="Category">
+							<MdCategory size={18} />
+						</List>
+						<List link={UrlNotification()} title="Notification">
+							<IoNotifications size={18} />
+						</List>
+						{/* <List link={UrlSettings()} title="Settings">
               <IoSettingsSharp size={18} />
             </List> */}
-          </ul>
-        </>
-        <button
-          onClick={handleLogOut}
-          className="absolute bottom-2 justify-between flex items-center w-[90%] bg-[#1ea474] text-[#fff] py-2 px-5 rounded-sm"
-        >
-          <p>Log Out</p> <FaSignOutAlt />
-        </button>
-      </Sidebar>
-    </div>
-  );
+					</ul>
+				</>
+				<button
+					onClick={handleLogOut}
+					className="absolute bottom-2 justify-between flex items-center w-[90%] bg-[#1ea474] text-[#fff] py-2 px-5 rounded-sm"
+				>
+					<p>Log Out</p> <FaSignOutAlt />
+				</button>
+			</Sidebar>
+		</div>
+	);
 }
 
 export default CustomSidebar;
 
+
+// list title types
 interface listTitle {
-  title: string;
-  children: ReactNode;
-  link: string;
+	title: string;
+	children: ReactNode;
+	link: string;
 }
 
 const List = ({ title, link, children }: listTitle) => {
-  const location = useLocation();
+	const location = useLocation();
 
-  return (
-    <li className="w-full mb-1">
-      <Link
-        to={link || "/"}
-        className="w-full py-2 px-4 rounded-[5px] flex gap-2 items-center text-md"
-        style={{
-          backgroundColor: location.pathname === link ? "#1ea474" : "#00000010",
-          color: location.pathname === link ? "#fff" : "#000000",
-        }}
-      >
-        {children}
-        {title}
-      </Link>
-    </li>
-  );
+	return (
+		<li className="w-full mb-1">
+			<Link
+				to={link || "/"}
+				className="w-full py-2 px-4 rounded-[5px] flex gap-2 items-center text-md"
+				style={{
+					backgroundColor: location.pathname === link ? "#1ea474" : "#00000010",
+					color: location.pathname === link ? "#fff" : "#000000",
+				}}
+			>
+				{children}
+				{title}
+			</Link>
+		</li>
+	);
 };

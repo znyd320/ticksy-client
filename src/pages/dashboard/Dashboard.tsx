@@ -7,7 +7,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { MdDeliveryDining } from "react-icons/md";
-import DashboardCard from "../../components/card/Card"; 
+// import Card from "../../components/card/Card"; 
 
 function Dashboard() {
   const userData = null;

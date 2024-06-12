@@ -6,7 +6,7 @@ import { UrlDashboard } from "../router/url";
 
 function PublicGuard() {
   const isLoggedIn = useAuth();
-  console.log("isLoggedIn", isLoggedIn);
+  // console.log("isLoggedIn", isLoggedIn);
 
   return !isLoggedIn ? (
     <Suspense fallback={<Loader />}>
