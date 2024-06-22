@@ -7,14 +7,14 @@ import NotFound from "../pages/notFound/NotFound";
 import Registration from "../pages/registration/Registration";
 
 import {
-	UrlCategory,
+	UrlCategories,
+	UrlCustomers,
 	UrlDashboard,
-	UrlFinance,
-	UrlNotification,
+	UrlKnowledge,
+	UrlAgents,
 	UrlNotificationSend,
-	UrlPriceCreate,
-	UrlProRequest,
-	UrlUser,
+	UrlAnalytics,
+	UrlTickets,
 } from "./url";
 
 export const routerList = [
@@ -45,28 +45,28 @@ export const routerList = [
 								element: <Dashboard />,
 							},
 							{
-								path: UrlCategory(),
-								element: <>Category</>,
+								path: UrlCategories(),
+								element: <>Categories</>,
 							},
 							{
-								path: UrlUser(),
-								element: <>Users</>,
+								path: UrlCustomers(),
+								element: <>Customers</>,
 							},
 							{
-								path: UrlProRequest(),
-								element: <>Pro users</>,
+								path: UrlKnowledge(),
+								element: <>Knowledge</>,
 							},
 							{
-								path: UrlFinance(),
-								element: <>Finance</>,
+								path: UrlTickets(),
+								element: <>Tickets</>,
 							},
 							{
-								path: UrlPriceCreate(),
-								element: <>Price Create</>,
+								path: UrlAnalytics(),
+								element: <>Analytics</>,
 							},
 							{
-								path: UrlNotification(),
-								element: <>Notifications</>,
+								path: UrlAgents(),
+								element: <>Agents</>,
 							},
 							// {
 							//   path: UrlSettings(),

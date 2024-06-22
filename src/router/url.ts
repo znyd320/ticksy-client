@@ -1,9 +1,10 @@
-export const UrlUser = () => "/users";
-export const UrlCategory = () => "/category";
-export const UrlProRequest = () => "/pro-request";
-export const UrlFinance = () => "/finance";
+export const UrlCustomers = () => "/customers";
+export const UrlTickets = () => "/tickets";
+export const UrlCategories = () => "/categories";
+export const UrlKnowledge = () => "/knowledge";
+export const UrlAgents = () => "/agents";
 export const UrlDashboard = () => "/dashboard";
-export const UrlPriceCreate = () => "/price-create";
+export const UrlAnalytics = () => "/analytics";
 export const UrlNotification = () => "/notification";
 export const UrlSettings = () => "/settings";
 export const UrlNotificationSend = () => "/notification-send";

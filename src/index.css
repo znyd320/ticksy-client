@@ -11,25 +11,3 @@ html {
 	height: 100%;
 	margin: 0;
 }
-
-/* width */
-/* *::-webkit-scrollbar {
-	width: 3px;
-} */
-
-/* Track */
-/* *::-webkit-scrollbar-track {
-	background: #d4d4d4;
-	border-radius: 5px;
-} */
-
-/* Handle */
-/* *::-webkit-scrollbar-thumb {
-	background: #e2e2e2;
-	border-radius: 5px;
-} */
-
-/* Handle on hover */
-/* ::-webkit-scrollbar-thumb:hover {
-	background: #555;
-} */
