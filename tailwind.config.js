@@ -84,6 +84,28 @@ export default {
 			spacing: {
 				"--spacing-8xl": "48px",
 			},
+			keyframes: {
+				"show-hidden-element": {
+					"0%": {
+						opacity: 0,
+					},
+					"25%": {
+						opacity: 0.25,
+					},
+					"50%": {
+						opacity: 0.5,
+					},
+					"75%": {
+						opacity: 0.75,
+					},
+					"100%": {
+						opacity: 1,
+					},
+				},
+			},
+			animation: {
+				"show-hidden-element": "show-hidden-element 1s ease-in-out",
+			},
 		},
 	},
 	plugins: [flowbite],
