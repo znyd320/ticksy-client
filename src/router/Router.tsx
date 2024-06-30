@@ -5,6 +5,7 @@ import Dashboard from "../pages/dashboard/Dashboard";
 import Login from "../pages/login/Login";
 import NotFound from "../pages/notFound/NotFound";
 import Registration from "../pages/registration/Registration";
+import Tickets from "../pages/tickets/Tickets";
 
 import {
 	UrlCategories,
@@ -12,7 +13,7 @@ import {
 	UrlDashboard,
 	UrlKnowledge,
 	UrlAgents,
-	UrlNotificationSend,
+	UrlAssignme,
 	UrlAnalytics,
 	UrlTickets,
 } from "./url";
@@ -58,7 +59,7 @@ export const routerList = [
 							},
 							{
 								path: UrlTickets(),
-								element: <>Tickets</>,
+								element: <Tickets/>,
 							},
 							{
 								path: UrlAnalytics(),
@@ -73,8 +74,8 @@ export const routerList = [
 							//   element: <Settings />,
 							// },
 							{
-								path: UrlNotificationSend(),
-								element: <>Notification send</>,
+								path: UrlAssignme(),
+								element: <>Assignme</>,
 							},
 							{
 								path: "/group-create",

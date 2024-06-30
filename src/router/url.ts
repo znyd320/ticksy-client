@@ -5,7 +5,7 @@ export const UrlKnowledge = () => "/knowledge";
 export const UrlAgents = () => "/agents";
 export const UrlDashboard = () => "/dashboard";
 export const UrlAnalytics = () => "/analytics";
-export const UrlNotification = () => "/notification";
+export const UrlAssignme = () => "/assignme";
 export const UrlSettings = () => "/settings";
 export const UrlNotificationSend = () => "/notification-send";
 // export const UrlSettings = () => "/settings";
