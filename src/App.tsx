@@ -8,11 +8,7 @@ import { routerList } from "./router/Router";
 const router = createBrowserRouter(routerList);
 
 function App() {
-	// const isLoggedIn = useAuth();
 	const isAuthChecked = useAuthCheck();
-
-	// console.log("isLoggedIn =>", isLoggedIn);
-	// console.log("isAuthChecked =>", isAuthChecked);
 
 	if (isAuthChecked) {
 		return (

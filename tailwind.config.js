@@ -9,7 +9,8 @@ export default {
 	],
 	theme: {
 		fontSize: {
-			xs: ["12px", "16px"],
+			"xs-100": ["12px", "16px"],
+			"xs-200": ["12px", "20px"],
 			sm: ["14px", "20px"],
 			base1: ["16px", "16px"],
 			base2: ["16px", "24px"],
