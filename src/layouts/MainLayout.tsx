@@ -6,8 +6,8 @@ function MainLayout() {
 	return (
 		<>
 			<div className="flex md:flex sm:w-full">
-				{open && <CustomSidebar />}
-				<div className="w-full">
+				<CustomSidebar />
+				<div className="w-full px-6">
 					<Header />
 					<div className=" h-[80vh] overflow-x-auto sm:h-full">
 						<Outlet />

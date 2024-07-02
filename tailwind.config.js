@@ -26,6 +26,16 @@ export default {
 			"5xl": ["40px", "40px"],
 		},
 		extend: {
+			backgroundImage: {
+				"assigned-tickets-gradiant":
+					"linear-gradient(262deg, #36D1DC -22.09%, #1C4DB5 116.67%)",
+				"starred-tickets-gradiant":
+					"linear-gradient(263deg, #F0F2F0 -22.73%, #000C40 116.94%)",
+				"close-tickets-gradiant":
+					"linear-gradient(263deg, #FFF9EE -32.05%, #E73827 117.22%)",
+				"total-tickets-gradiant":
+					"linear-gradient(263deg, #A8E063 -22.87%, #418325 100%)",
+			},
 			colors: {
 				// text colors
 				btnTxt: "#FFFFFF",
@@ -76,6 +86,8 @@ export default {
 				paleSky600: "#474C55",
 				// schoolbus yellow colors
 				schoolBusYellow25: "#FDECCE",
+				sky: "#36D1DC",
+				blue: "#1C4DB5",
 			},
 			fontFamily: {
 				Roboto: ["Roboto", "sans-serif"],
@@ -84,6 +96,7 @@ export default {
 			},
 			spacing: {
 				"--spacing-8xl": "48px",
+				"--rounded-md": "12px",
 			},
 			keyframes: {
 				"show-hidden-element": {
@@ -106,6 +119,10 @@ export default {
 			},
 			animation: {
 				"show-hidden-element": "show-hidden-element 1s ease-in-out",
+			},
+			boxShadow: {
+				"tickets-box":
+					"-1px -1px 0px 0px rgba(0, 0, 0, 0.10), 1px 1px 0px 0px rgba(0, 0, 0, 0.10), -30px -30px 80px 0px rgba(255, 255, 255, 0.25), 1px 1px 0px 0px #FFF inset;",
 			},
 		},
 	},

@@ -1,12 +1,15 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import messageNotify from "../../assets/headerImages/messageNotify.svg";
-import Searchbar from "./Searchbar";
+import AssignedTickets from "../ticket-section/AssignedTickets";
 import NotificationModal from "./NotificationModal";
+import Searchbar from "./Searchbar";
+import StarredTickets from "../ticket-section/StarredTickets";
+import CloseTickets from "../ticket-section/CloseTickets";
+import AllTickets from "../ticket-section/AllTickets";
 
 function Header() {
 	const [openNotification, setOpenNotification] = useState<boolean>(false);
 	const menuRef = useRef<HTMLDivElement>(null);
-
 
 	// close notification modal by clicking outside
 	useEffect(() => {
@@ -26,11 +29,11 @@ function Header() {
 
 	return (
 		<>
-			<div className="py-10 flex items-center justify-between px-6">
-				<Searchbar/>
+			<div className="py-10 flex items-center justify-between">
+				<Searchbar />
 				<div className="flex items-start gap-6 relative">
 					{/* notification Modal */}
-					<NotificationModal open={openNotification} menuRef={menuRef}/>
+					<NotificationModal open={openNotification} menuRef={menuRef} />
 					{/* right side of the header */}
 					<div className="flex items-center gap-6">
 						<img
@@ -46,6 +49,12 @@ function Header() {
 						</span>
 					</div>
 				</div>
+			</div>
+			<div className="grid grid-cols-4 gap-6">
+				<AssignedTickets />
+				<StarredTickets/>
+				<CloseTickets/>
+				<AllTickets/>
 			</div>
 		</>
 	);
