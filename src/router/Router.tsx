@@ -8,13 +8,13 @@ import Registration from "../pages/registration/Registration";
 import Tickets from "../pages/tickets/Tickets";
 
 import {
+	UrlAgents,
+	UrlAnalytics,
+	UrlAssignme,
 	UrlCategories,
 	UrlCustomers,
 	UrlDashboard,
 	UrlKnowledge,
-	UrlAgents,
-	UrlAssignme,
-	UrlAnalytics,
 	UrlTickets,
 } from "./url";
 
@@ -29,6 +29,15 @@ export const routerList = [
 			{
 				path: "/reg",
 				element: <Registration />,
+			},
+			{
+				element: <MainLayout />,
+				children: [
+					{
+						path: UrlDashboard(),
+						element: <Dashboard />,
+					},
+				],
 			},
 		],
 	},
@@ -59,7 +68,7 @@ export const routerList = [
 							},
 							{
 								path: UrlTickets(),
-								element: <Tickets/>,
+								element: <Tickets />,
 							},
 							{
 								path: UrlAnalytics(),

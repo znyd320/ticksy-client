@@ -70,8 +70,8 @@ export default function CustomSidebar() {
 	};
 
 	return (
-		<aside className="min-h-screen w-[316px] border-r sticky">
-			<nav className="h-full flex flex-col justify-between space-y-4">
+		<aside className="min-h-screen w-[316px] border-r sticky top-0 left-0">
+			<nav className="h-full flex flex-col justify-between">
 				{/* Top part of sidebar */}
 				<div className="space-y-12">
 					{/* logo */}
