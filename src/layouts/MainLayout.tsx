@@ -5,11 +5,11 @@ import CustomSidebar from "../components/sidebar/CustomSidebar";
 function MainLayout() {
 	return (
 		<>
-			<div className="flex md:flex sm:w-full">
+			<div className="">
 				<CustomSidebar />
-				<div className="w-full px-6">
+				<div className="relative md:left-[250px] 2xl:left-[316px] md:w-md-w 2xl:w-2xl-w -px--spacing-4xl">
 					<Header />
-					<div className=" h-[80vh] overflow-x-auto sm:h-full">
+					<div className="">
 						<Outlet />
 					</div>
 				</div>

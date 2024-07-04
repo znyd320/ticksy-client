@@ -37,6 +37,34 @@ export const routerList = [
 						path: UrlDashboard(),
 						element: <Dashboard />,
 					},
+					{
+						path: UrlCategories(),
+						element: <>Categories</>,
+					},
+					{
+						path: UrlCustomers(),
+						element: <>Customers</>,
+					},
+					{
+						path: UrlKnowledge(),
+						element: <>Knowledge</>,
+					},
+					{
+						path: UrlTickets(),
+						element: <Tickets />,
+					},
+					{
+						path: UrlAnalytics(),
+						element: <>Analytics</>,
+					},
+					{
+						path: UrlAgents(),
+						element: <>Agents</>,
+					},
+					{
+						path: UrlAssignme(),
+						element: <>Assignme</>,
+					},
 				],
 			},
 		],
@@ -53,38 +81,6 @@ export const routerList = [
 							{
 								path: UrlDashboard(),
 								element: <Dashboard />,
-							},
-							{
-								path: UrlCategories(),
-								element: <>Categories</>,
-							},
-							{
-								path: UrlCustomers(),
-								element: <>Customers</>,
-							},
-							{
-								path: UrlKnowledge(),
-								element: <>Knowledge</>,
-							},
-							{
-								path: UrlTickets(),
-								element: <Tickets />,
-							},
-							{
-								path: UrlAnalytics(),
-								element: <>Analytics</>,
-							},
-							{
-								path: UrlAgents(),
-								element: <>Agents</>,
-							},
-							// {
-							//   path: UrlSettings(),
-							//   element: <Settings />,
-							// },
-							{
-								path: UrlAssignme(),
-								element: <>Assignme</>,
 							},
 							{
 								path: "/group-create",

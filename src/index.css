@@ -8,8 +8,8 @@
 
 body,
 html {
-	height: 100%;
 	margin: 0;
+	padding: 0;
 }
 
 /* Remove background color on autofill in various browsers */
@@ -36,4 +36,15 @@ input:-ms-autofill:active {
 	-ms-box-shadow: 0 0 0px 1000px white inset !important;
 	box-shadow: 0 0 0px 1000px white inset !important;
 	-ms-text-fill-color: inherit !important;
+}
+
+/* scrollbar edit */
+
+::-webkit-scrollbar {
+	width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #ddd;
+	border-radius: 10px;
 }

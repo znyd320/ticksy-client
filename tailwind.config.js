@@ -96,6 +96,7 @@ export default {
 			},
 			spacing: {
 				"--spacing-8xl": "48px",
+				"--spacing-4xl": "32px",
 				"--rounded-md": "12px",
 			},
 			keyframes: {
@@ -123,6 +124,10 @@ export default {
 			boxShadow: {
 				"tickets-box":
 					"-1px -1px 0px 0px rgba(0, 0, 0, 0.10), 1px 1px 0px 0px rgba(0, 0, 0, 0.10), -30px -30px 80px 0px rgba(255, 255, 255, 0.25), 1px 1px 0px 0px #FFF inset;",
+			},
+			width: {
+				"md-w": "calc(100% - 250px)",
+				"2xl-w": "calc(100% - 316px)",
 			},
 		},
 	},
