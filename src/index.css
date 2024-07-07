@@ -10,6 +10,7 @@ body,
 html {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 /* Remove background color on autofill in various browsers */
@@ -38,13 +39,46 @@ input:-ms-autofill:active {
 	-ms-text-fill-color: inherit !important;
 }
 
-/* scrollbar edit */
-
+/* width */
 ::-webkit-scrollbar {
-	width: 2px;
+  width: 5px;
 }
 
+/* Handle */
 ::-webkit-scrollbar-thumb {
-	background-color: #ddd;
-	border-radius: 10px;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Custom Utilities */
+
+@layer utilities {
+	.navbar-style {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		cursor: pointer;
+	}
+
+	.navbar-style:hover {
+		color: #0039bd;
+		border-left: 8px solid #0039bd;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		background: theme(backgroundImage.navbar-gradiant);
+	}
+
+	.active-navbar {
+		color: #0039bd;
+		border-left: 8px solid #0039bd;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		background: theme(backgroundImage.navbar-gradiant);
+	}
+
+	
 }

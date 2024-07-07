@@ -1,8 +1,9 @@
-import editProfileWhite from "../../assets/profileIcons/editColor.svg";
-import editProfile from "../../assets/profileIcons/editDefault.svg";
-import repliesColor from "../../assets/profileIcons/repliesColor.svg";
-import replies from "../../assets/profileIcons/repliesDefault.svg";
-import signout from "../../assets/profileIcons/signoutDefault.svg";
+
+import { LuPencil } from "react-icons/lu";
+import { RiMessage2Line } from "react-icons/ri";
+import { IoIosLogOut } from "react-icons/io";
+
+
 
 interface ProfileOptionsProps {
 	showProfile: boolean;
@@ -19,49 +20,50 @@ const ProfileOptions = ({
 }: ProfileOptionsProps) => {
 	return (
 		<div
-			className={`mx-6 py-4 bg-secondaryDisable space-y-1 rounded-t-md ${
-				showProfile ? "block animate-show-hidden-element" : "hidden"
+			className={`mx-6 py-4 bg-secondaryDisable space-y-1 rounded-t-md  ${
+				showProfile ? "block" : "hidden"
 			}`}
 		>
 			{/* edit Profile ---------------*/}
 			<div
-				className={`flex items-center py-3 px-7 space-x-3 cursor-pointer hover:bg-secondaryDefault hover:text-white duration-200 ${
+				className={`group flex items-center py-3 px-7 space-x-3 cursor-pointer hover:text-white hover:bg-secondaryDefault duration-200 ${
 					selectedProfile === "editProfile"
 						? "bg-secondaryDefault text-white"
 						: "text-txtColor"
 				}`}
 				onClick={() => handleProfile("editProfile")}
 			>
-				<img
-					src={
-						selectedProfile === "editProfile" ? editProfileWhite : editProfile
-					}
-					alt="editProfile"
-				/>
-				<span className="text-sm font-Lato font-medium">Edit Profile</span>
+				<LuPencil/>
+				<span className="text-lg3 md:text-sm font-Lato font-medium group-hover:text-white">
+					Edit Profile
+				</span>
 			</div>
 			{/* saved replies ---------------*/}
 			<div
-				className={`flex items-center py-3 px-7 space-x-3 cursor-pointer hover:bg-secondaryDefault hover:text-white duration-200 ${
+				className={`group flex items-center py-3 px-7 space-x-3 cursor-pointer hover:text-white hover:bg-secondaryDefault duration-200 ${
 					selectedProfile === "savedReplies"
 						? "bg-secondaryDefault text-white"
 						: "text-txtColor"
 				}`}
 				onClick={() => handleProfile("savedReplies")}
 			>
-				<img
-					src={selectedProfile === "savedReplies" ? repliesColor : replies}
-					alt="saved Replies"
-				/>
-				<span className="text-sm font-Lato font-medium">Saved Replies</span>
+				
+				<RiMessage2Line className=""/>
+
+				<span className="text-lg3 md:text-sm  font-Lato font-medium group-hover:text-white">
+					Saved Replies
+				</span>
 			</div>
 			{/* signout ---------------*/}
 			<div
 				onClick={logOut}
-				className="flex items-center py-3 px-7 space-x-3 cursor-pointer text-txtColor hover:bg-secondaryDefault hover:text-white duration-200"
+				className="group flex items-center py-3 px-7 space-x-3 cursor-pointer text-txtColor hover:text-white hover:bg-secondaryDefault duration-200"
 			>
-				<img src={signout} alt="sign out" />
-				<span className="text-sm font-Lato font-medium">Sign Out</span>
+				<IoIosLogOut className="md:text-[18px]"/>
+
+				<span className="text-lg3 md:text-sm  font-Lato font-medium group-hover:text-white">
+					Sign Out
+				</span>
 			</div>
 		</div>
 	);

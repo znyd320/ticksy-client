@@ -35,6 +35,8 @@ export default {
 					"linear-gradient(263deg, #FFF9EE -32.05%, #E73827 117.22%)",
 				"total-tickets-gradiant":
 					"linear-gradient(263deg, #A8E063 -22.87%, #418325 100%)",
+				"navbar-gradiant":
+					"linear-gradient(270deg, rgba(222, 229, 247, 0.00) 0%, #DEE5F7 98.78%)",
 			},
 			colors: {
 				// text colors
