@@ -69,7 +69,7 @@ export default function CustomSidebar() {
 	};
 
 	return (
-		<aside className="h-full md:w-[260px] 2xl:w-[316px] fixed top-0 left-0 flex flex-col pt-5 border-r">
+		<aside className="h-full md:w-[250px] 2xl:w-[316px] fixed top-0 left-0 flex flex-col pt-5 border-r">
 			{/* sidebar logo */}
 			<header className="-mb--spacing-8xl md:-mb--spacing-4xl">
 				<h1 className="md:text-xl 2xl:text-4xl text-prev text-primaryDefault font-bold font-Inter text-center pb-[5px]">

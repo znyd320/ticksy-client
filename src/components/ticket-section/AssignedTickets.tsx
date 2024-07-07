@@ -1,18 +1,17 @@
+import { HiMiniArrowsUpDown } from "react-icons/hi2";
 import assignedTickets from "../../assets/headerImages/tickets-section/assigned.svg";
-import {HiMiniArrowsUpDown} from "react-icons/hi2"
 
 const AssignedTickets = () => {
 	return (
-		<div className="group p-6 rounded-2xl shadow-tickets-box flex items-center justify-between hover:bg-assigned-tickets-gradiant cursor-pointer hover:shadow-none">
+		<div className="group p-6 rounded-2xl shadow-tickets-box flex items-center justify-between hover:bg-[#F4F4F4] cursor-pointer">
 			<div className="flex flex-col -gap--rounded-md">
 				<div className="flex items-center gap-[10px]">
-					<h4 className="font-Lato text-secondaryDefault font-bold group-hover:text-white text-2xl md:text-prev leading-none">
+					<h4 className="font-Lato text-secondaryDefault font-bold text-2xl md:text-prev leading-none">
 						0,000
 					</h4>
-					<HiMiniArrowsUpDown className="text-[18px] group-hover:text-white text-[#6380F6]"/>
-
+					<HiMiniArrowsUpDown className="text-[18px] text-[#6380F6]" />
 				</div>
-				<h4 className="text-txtColor font-Lato text-lg1 md:text-sm leading-none font-medium capitalize group-hover:text-white">
+				<h4 className="text-txtColor font-Lato text-lg1 md:text-sm leading-none font-medium capitalize">
 					Assign to me
 				</h4>
 			</div>

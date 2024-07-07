@@ -1,4 +1,4 @@
-import searchImg from "../../assets/headerImages/search.svg";
+import { GoSearch } from "react-icons/go";
 
 const Searchbar = () => {
 	return (
@@ -11,7 +11,8 @@ const Searchbar = () => {
 					className="placeholder:text-[#c9c9c9] p-0 font-Lato text-sm leading-none focus:outline-none focus:ring-0 w-full border-none line-clamp-1 text-ellipsis"
 					placeholder="Search for Tickets...."
 				/>
-				<img src={searchImg} alt="" className="cursor-pointer" />
+				{/* <img src={searchImg} alt="" className="cursor-pointer" /> */}
+				<GoSearch className="cursor-pointer text-txtColor" />
 			</form>
 		</div>
 	);

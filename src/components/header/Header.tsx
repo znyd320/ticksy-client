@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import messageNotify from "../../assets/headerImages/messageNotify.svg";
+import { FaRegBell } from "react-icons/fa";
+import AllTickets from "../ticket-section/AllTickets";
 import AssignedTickets from "../ticket-section/AssignedTickets";
+import CloseTickets from "../ticket-section/CloseTickets";
+import StarredTickets from "../ticket-section/StarredTickets";
 import NotificationModal from "./NotificationModal";
 import Searchbar from "./Searchbar";
-import StarredTickets from "../ticket-section/StarredTickets";
-import CloseTickets from "../ticket-section/CloseTickets";
-import AllTickets from "../ticket-section/AllTickets";
 
 function Header() {
 	const [openNotification, setOpenNotification] = useState<boolean>(false);
@@ -35,11 +35,9 @@ function Header() {
 					{/* notification Modal */}
 					<NotificationModal open={openNotification} menuRef={menuRef} />
 					{/* right side of the header */}
-					<div className="flex items-center gap-6">
-						<img
+					<div className="flex items-center gap-4">
+						<FaRegBell
 							onClick={() => setOpenNotification(!openNotification)}
-							src={messageNotify}
-							alt="notify"
 							className={`cursor-pointer ${
 								openNotification ? "hidden" : "block"
 							}`}
@@ -50,11 +48,11 @@ function Header() {
 					</div>
 				</div>
 			</div>
-			<div className="grid grid-cols-4 gap-6">
+			<div className="grid grid-cols-4 gap-6 my-6">
 				<AssignedTickets />
-				<StarredTickets/>
-				<CloseTickets/>
-				<AllTickets/>
+				<StarredTickets />
+				<CloseTickets />
+				<AllTickets />
 			</div>
 		</>
 	);

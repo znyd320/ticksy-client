@@ -3,16 +3,16 @@ import {HiMiniArrowsUpDown} from "react-icons/hi2"
 
 const StarredTickets = () => {
 	return (
-		<div className="group p-6 rounded-2xl shadow-tickets-box flex items-center justify-between hover:bg-starred-tickets-gradiant cursor-pointer hover:shadow-none">
+		<div className="group p-6 rounded-2xl shadow-tickets-box flex items-center justify-between hover:bg-[#F4F4F4] cursor-pointer">
 			<div className="flex flex-col -gap--rounded-md">
 				<div className="flex items-center gap-[10px]">
-					<h4 className="font-Lato text-[#000C40] font-bold group-hover:text-white text-2xl md:text-prev leading-none">
+					<h4 className="font-Lato text-[#000C40] font-bold text-2xl md:text-prev leading-none">
 						0,000
 					</h4>
-					<HiMiniArrowsUpDown className="text-[18px] group-hover:text-white text-[#000C40]"/>
+					<HiMiniArrowsUpDown className="text-[18px] text-[#000C40]"/>
 
 				</div>
-				<h4 className="text-txtColor font-Lato text-lg1 md:text-sm leading-none font-medium capitalize group-hover:text-white">
+				<h4 className="text-txtColor font-Lato text-lg1 md:text-sm leading-none font-medium capitalize">
 					Starred Tickets
 				</h4>
 			</div>
