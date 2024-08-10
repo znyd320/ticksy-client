@@ -78,12 +78,25 @@ export default function CustomSidebar() {
 			</header>
 
 			{/* sidebar menu */}
-			<div className="overflow-scroll invisible hover:visible flex-grow px-1">
+			<div className="overflow-scroll flex-grow flex flex-col justify-between">
 				<Menu />
+
+				{/* helping section */}
+				<section className="bg-[#FBFBFB] text-center py-6">
+					<p className="text-[#4F4F4F] font-Lato text-xs-100 font-semibold uppercase mb-1">
+						You can contact
+					</p>
+					<p className="text-[#4F4F4F] font-Inter text-sm font-semibold capitalize mb-2">
+						Need Help ?
+					</p>
+					<button className="-px--rounded-md py-2 -bg--Secondary-CTA rounded text-white text-xs-100 font-semibold uppercase">
+						Get support
+					</button>
+				</section>
 			</div>
 
 			{/* footer of sidebar menu---------------------- */}
-			<footer className="mt-auto flex-shrink-0">
+			<footer className="mt-auto flex-shrink-0 z-10">
 				<ProfileOptions
 					showProfile={showProfile}
 					selectedProfile={selectedProfile}
@@ -101,7 +114,7 @@ export default function CustomSidebar() {
 				{/* Show Settings ------------ end */}
 
 				{/* profile & settings */}
-				<div className="flex p-6 gap-3">
+				<div className="flex p-6 gap-3 justify-center">
 					<div
 						onClick={handleShowProfile}
 						className="bg-secondaryDisable py-3 px-6 flex items-center rounded justify-center gap-2  cursor-pointer duration-75"

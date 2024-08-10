@@ -64,17 +64,9 @@ input:-ms-autofill:active {
 		cursor: pointer;
 	}
 
-	.navbar-style:hover {
-		color: #0039bd;
-		border-left: 8px solid #0039bd;
-		border-top-left-radius: 4px;
-		border-bottom-left-radius: 4px;
-		background: theme(backgroundImage.navbar-gradiant);
-	}
-
 	.active-navbar {
-		color: #0039bd;
-		border-left: 8px solid #0039bd;
+		color: theme(colors.--Secondary-CTA);
+		border-color:  theme(colors.--Secondary-CTA);
 		border-top-left-radius: 4px;
 		border-bottom-left-radius: 4px;
 		background: theme(backgroundImage.navbar-gradiant);

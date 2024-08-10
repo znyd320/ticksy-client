@@ -1,3 +1,7 @@
+
+import tableImg from "../../assets/table-images/table-image.png"
+import assignedImg from "../../assets/table-images/assigned-image.png"
+
 const TableOfTickets = () => {
 	return (
 			<table className="w-full">
@@ -43,7 +47,7 @@ const TableOfTickets = () => {
 								<div className="h-7 w-7">
 									<img
 										className="w-full rounded-full"
-										src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png"
+										src={tableImg}
 										alt="Avatar Tailwind CSS Component"
 									/>
 								</div>
@@ -77,7 +81,7 @@ const TableOfTickets = () => {
 								<div className="h-7 w-7">
 									<img
 										className="rounded-full"
-										src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png"
+										src={assignedImg}
 										alt="Avatar Tailwind CSS Component"
 									/>
 								</div>

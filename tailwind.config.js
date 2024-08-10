@@ -61,6 +61,7 @@ export default {
 				dangerDisable: "#FFCCCC",
 				// secondary colors
 				secondaryDefault: "#6380F6",
+				"--Secondary-CTA": "#0039BD",
 				secondaryDisable: "#E0E6FD",
 				secondaryFocus: "#536BCD",
 				// success colors
