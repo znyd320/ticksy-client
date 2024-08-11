@@ -41,17 +41,17 @@ input:-ms-autofill:active {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+	width: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+	background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+	background: #555;
 }
 
 /* Custom Utilities */
@@ -66,9 +66,15 @@ input:-ms-autofill:active {
 
 	.active-navbar {
 		color: theme(colors.--Secondary-CTA);
-		border-color:  theme(colors.--Secondary-CTA);
+		border-color: theme(colors.--Secondary-CTA);
 		border-top-left-radius: 4px;
 		border-bottom-left-radius: 4px;
 		background: theme(backgroundImage.navbar-gradiant);
+	}
+
+	.bottom-shadow {
+		box-shadow: -1px -1px 0px 0px rgba(0, 0, 0, 0.1),
+			1px 1px 0px 0px rgba(0, 0, 0, 0.1),
+			-30px -30px 80px 0px rgba(255, 255, 255, 0.25), 1px 1px 0px 0px #fff;
 	}
 }

@@ -28,7 +28,7 @@ function Header() {
 	});
 
 	return (
-		<>
+		<div className="">
 			<div className="py-10 flex items-center justify-between">
 				<Searchbar />
 				<div className="flex items-start gap-6 relative">
@@ -54,7 +54,7 @@ function Header() {
 				<CloseTickets />
 				<AllTickets />
 			</div>
-		</>
+		</div>
 	);
 }
 

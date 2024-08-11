@@ -8,7 +8,7 @@ function Dashboard() {
       <div className="w-3/4 overflow-x-auto">
         <TableOfTickets/>
       </div>
-      <div className="w-1/5">
+      <div className="w-[23%]">
       <FilterTickets/>
       </div>
     </div>

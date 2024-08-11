@@ -7,7 +7,7 @@ const TableOfTickets = () => {
 	return (
 			<table className="w-full">
 				{/* head */}
-				<thead className="bg-secondaryDisable px-6 border-l-[5px] hover:border-l-secondaryDisable">
+				<thead className="bg-secondaryDisable px-6 border-l-[5px] border-l-secondaryDisable">
 					<tr>
 						<th className="pl-6 pr-3 py-4 text-left ">
 							<label className="flex items-center -gap--rounded-md">
