@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { FaUserCircle } from "react-icons/fa";
-import { IoSettings } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { logOutState } from "../../features/auth/auth";
 import Menu from "./Menu";
 import ProfileOptions from "./ProfileOptions";
 import SettingsOptions from "./SettingsOptions";
+
+import profileIcon from "../../assets/side-navbar-icons/sidebar-bottom-section/profile-section-icons/profile-icon.svg";
+import settingIcon from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/settings-icon.svg";
 
 export default function CustomSidebar() {
 	const [showProfile, setShowProfile] = useState<boolean>(false);
@@ -120,11 +121,11 @@ export default function CustomSidebar() {
 						className="bg-secondaryDisable py-3 px-6 flex items-center rounded justify-center gap-2  cursor-pointer duration-75"
 					>
 						{/* Profile Picture */}
-						<FaUserCircle className="md:text-[22px] text-[#545454]" />
+						<img src={profileIcon} alt="" width={22} />
 						{/* Arrow */}
 
 						<MdKeyboardArrowDown
-							className={`text-[22px] text-[#545454] duration-200 ${
+							className={`text-[#545454] duration-200 ${
 								showProfile ? "rotate-180" : ""
 							}`}
 						/>
@@ -134,11 +135,10 @@ export default function CustomSidebar() {
 						className="bg-secondaryDisable py-3 px-6 flex items-center rounded justify-center gap-2 cursor-pointer duration-75"
 					>
 						{/* Settings icon */}
-
-						<IoSettings className="md:text-[22px] text-[#545454]" />
+						<img src={settingIcon} alt="" width={22} />
 						{/* arrown icon */}
 						<MdKeyboardArrowDown
-							className={`text-[22px] text-[#545454] duration-200 ${
+							className={`text-[#545454] duration-200 ${
 								showSettings ? "rotate-180" : ""
 							}`}
 						/>

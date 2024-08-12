@@ -4,13 +4,17 @@ interface SettingsOptionsProps {
 	showSettings: boolean;
 }
 
-import { LiaUser } from "react-icons/lia";
-import {
-	MdLockOutline,
-	MdOutlineArticle,
-	MdOutlineTextSnippet,
-} from "react-icons/md";
-import { TbZoomReset } from "react-icons/tb";
+import account from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/account.svg";
+import agents from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/agents.svg";
+import articles from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/articles.svg";
+import manageCategories from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/categories.svg";
+import system from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/system.svg";
+
+import selectedAccount from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/selected-account.svg";
+import SelectedAgents from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/selected-agent.svg";
+import selectedArticle from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/selected-article.svg";
+import selectedCategories from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/selected-categories.svg";
+import selectedSystem from "../../assets/side-navbar-icons/sidebar-bottom-section/settings-section-icons/selected-system.svg";
 
 const SettingsOptions = ({
 	handleSettings,
@@ -24,75 +28,99 @@ const SettingsOptions = ({
 			}`}
 		>
 			<div
-				className={`group flex items-center py-3 px-7 space-x-3 cursor-pointer hover:text-white hover:bg-secondaryDefault duration-200 ${
+				className={`group flex items-center py-3 px-5 space-x-3 cursor-pointer  duration-200 ${
 					selectedSettings === "categories"
-						? "bg-secondaryDefault text-white"
+						? "-bg--Secondary-CTA text-white"
 						: "text-txtColor"
 				}`}
 				onClick={() => handleSettings("categories")}
 			>
-				<MdOutlineArticle />
-				<span className="text-lg3 md:text-sm font-Lato font-medium group-hover:text-white">
+				{/* <MdOutlineArticle /> */}
+				<img
+					src={
+						selectedSettings === "categories"
+							? selectedCategories
+							: manageCategories
+					}
+					alt=""
+					className="w-[20px]"
+				/>
+				<span className="text-lg3 md:text-sm font-Lato font-medium ">
 					Manage Categories
 				</span>
 			</div>
 
 			<div
-				className={`group flex items-center py-3 px-7 space-x-3 cursor-pointer hover:text-white hover:bg-secondaryDefault duration-200 ${
+				className={`group flex items-center py-3 px-5 space-x-3 cursor-pointer  duration-200 ${
 					selectedSettings === "articles"
-						? "bg-secondaryDefault text-white"
+						? "-bg--Secondary-CTA text-white"
 						: "text-txtColor"
 				}`}
 				onClick={() => handleSettings("articles")}
 			>
-				<MdOutlineTextSnippet />
+				<img
+					src={selectedSettings === "articles" ? selectedArticle : articles}
+					alt=""
+					className="w-[19px]"
+				/>
 
-				<span className="text-lg3 md:text-sm font-Lato font-medium group-hover:text-white">
+				<span className="text-lg3 md:text-sm font-Lato font-medium ">
 					Manage Articles
 				</span>
 			</div>
 
 			<div
-				className={`group flex items-center py-3 px-7 space-x-3 cursor-pointer hover:bg-secondaryDefault hover:text-white duration-200 ${
+				className={`group flex items-center py-3 px-5 space-x-3 cursor-pointer  duration-200 ${
 					selectedSettings === "agents"
-						? "bg-secondaryDefault text-white"
+						? "-bg--Secondary-CTA text-white"
 						: "text-txtColor"
 				}`}
 				onClick={() => handleSettings("agents")}
 			>
-				<LiaUser />
-
-				<span className="text-lg3 md:text-sm font-Lato font-medium group-hover:text-white">
+				<img
+					src={selectedSettings === "agents" ? SelectedAgents : agents}
+					alt=""
+					className="w-5"
+				/>
+				<span className="text-lg3 md:text-sm font-Lato font-medium ">
 					Support Agents
 				</span>
 			</div>
 
 			<div
-				className={`group flex items-center py-3 px-7 space-x-3 cursor-pointer hover:text-white hover:bg-secondaryDefault duration-200 ${
+				className={`group flex items-center py-3 px-5 space-x-3 cursor-pointer  duration-200 ${
 					selectedSettings === "system"
-						? "bg-secondaryDefault text-white"
+						? "-bg--Secondary-CTA text-white"
 						: "text-txtColor"
 				}`}
 				onClick={() => handleSettings("system")}
 			>
-				<TbZoomReset />
+				<img
+					src={selectedSettings === "system" ? selectedSystem : system}
+					alt=""
+					className="w-5"
+				/>
 
-				<span className="text-lg3 md:text-sm font-Lato font-medium group-hover:text-white">
+				<span className="text-lg3 md:text-sm font-Lato font-medium ">
 					System Settings
 				</span>
 			</div>
 
 			<div
-				className={`group flex items-center py-3 px-7 space-x-3 cursor-pointer hover:bg-secondaryDefault hover:text-white duration-200 ${
+				className={`group flex items-center py-3 px-5 space-x-3 cursor-pointer  duration-200 ${
 					selectedSettings === "account"
-						? "bg-secondaryDefault text-white"
+						? "-bg--Secondary-CTA text-white"
 						: "text-txtColor"
 				}`}
 				onClick={() => handleSettings("account")}
 			>
-				<MdLockOutline />
+				<img
+					src={selectedSettings === "account" ? selectedAccount : account}
+					alt=""
+					className="w-5"
+				/>
 
-				<span className="text-lg3 md:text-sm font-Lato font-medium group-hover:text-white">
+				<span className="text-lg3 md:text-sm font-Lato font-medium ">
 					Account & Billing
 				</span>
 			</div>
