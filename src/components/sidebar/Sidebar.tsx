@@ -2,23 +2,38 @@ import { Sidebar } from "flowbite-react";
 import { ReactNode } from "react";
 import { FaSignOutAlt, FaTimes, FaUserCheck } from "react-icons/fa";
 import { HiMiniBanknotes } from "react-icons/hi2";
-import { MdCategory, MdDashboard, MdOutlinePriceCheck } from "react-icons/md";
+import {
+  MdAirplaneTicket,
+  MdCategory,
+  MdDashboard,
+  MdOutlineAirplaneTicket,
+  MdOutlinePriceCheck,
+} from "react-icons/md";
 
-import { FaUsers } from "react-icons/fa6";
+import { FaTicketSimple, FaUsers } from "react-icons/fa6";
 import { IoNotifications } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { logOutState } from "../../features/auth/auth";
 
 import {
+  UrlAnalytics,
   UrlCategory,
+  UrlCustomers,
   UrlDashboard,
   UrlFinance,
+  UrlKnowledge,
+  UrlManageAgent,
   UrlNotification,
   UrlPriceCreate,
   UrlProRequest,
+  UrlTickets,
   UrlUser,
 } from "../../router/url";
+import { TiTicket } from "react-icons/ti";
+import { SiKnowledgebase } from "react-icons/si";
+import { FcCustomerSupport } from "react-icons/fc";
+import { AiFillCustomerService } from "react-icons/ai";
 
 function CustomSidebar({ setOpen }: any) {
   const dispatch = useDispatch();
@@ -57,9 +72,34 @@ function CustomSidebar({ setOpen }: any) {
             <List link={UrlDashboard()} title="Dashboard">
               <MdDashboard size={18} />
             </List>
+            <List link={UrlTickets()} title="Tickets">
+              <TiTicket size={18} />
+            </List>
+
+            <List link={UrlCategory()} title="Category">
+              <MdCategory size={18} />
+            </List>
+
+            <List link={UrlKnowledge()} title="Knowledge">
+              <SiKnowledgebase size={18} />
+            </List>
+
+            <List link={UrlCustomers()} title="Customer's">
+              <MdCategory size={18} />
+            </List>
+
+            <List link={UrlManageAgent()} title="Manage Agent">
+              <MdCategory size={18} />
+            </List>
+
+            <List link={UrlAnalytics()} title="Analytics/Report's">
+              <MdCategory size={18} />
+            </List>
+
             <List link={UrlUser()} title="All Users">
               <FaUsers size={18} />
             </List>
+
             <List link={UrlProRequest()} title="Pro Users">
               <FaUserCheck size={18} />
             </List>
@@ -72,9 +112,6 @@ function CustomSidebar({ setOpen }: any) {
               <MdOutlinePriceCheck size={18} />
             </List>
 
-            <List link={UrlCategory()} title="Category">
-              <MdCategory size={18} />
-            </List>
             <List link={UrlNotification()} title="Notification">
               <IoNotifications size={18} />
             </List>

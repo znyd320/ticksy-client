@@ -1,20 +1,31 @@
 import PrivateGuard from "../guard/PrivateGuard";
 import PublicGuard from "../guard/PublicGuard";
 import MainLayout from "../layouts/MainLayout";
+import Analytics from "../pages/Analytics/Analytics";
+import Category from "../pages/Category/Category";
+import Customers from "../pages/Customers/Customers";
 import Dashboard from "../pages/dashboard/Dashboard";
+import Knowledge from "../pages/Knowledge/Knowledge";
 import Login from "../pages/login/Login";
+import ManageAgent from "../pages/Manage Agent/ManageAgent";
 import NotFound from "../pages/notFound/NotFound";
 import Registration from "../pages/registration/Registration";
 import Settings from "../pages/settings/Settings";
+import Tickets from "../pages/Tickets/Tickets/Tickets";
 import {
+  UrlAnalytics,
   UrlCategory,
+  UrlCustomers,
   UrlDashboard,
   UrlFinance,
+  UrlKnowledge,
+  UrlManageAgent,
   UrlNotification,
   UrlNotificationSend,
   UrlPriceCreate,
   UrlProRequest,
   UrlSettings,
+  UrlTickets,
   UrlUser,
 } from "./url";
 
@@ -46,8 +57,28 @@ export const routerList = [
                 element: <Dashboard />,
               },
               {
+                path: UrlTickets(),
+                element: <Tickets />,
+              },
+              {
                 path: UrlCategory(),
-                element: <>Category</>,
+                element: <Category />,
+              },
+              {
+                path: UrlKnowledge(),
+                element: <Knowledge />,
+              },
+              {
+                path: UrlCustomers(),
+                element: <Customers />,
+              },
+              {
+                path: UrlManageAgent(),
+                element: <ManageAgent />,
+              },
+              {
+                path: UrlAnalytics(),
+                element: <Analytics />,
               },
               {
                 path: UrlUser(),
