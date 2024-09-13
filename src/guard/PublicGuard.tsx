@@ -6,6 +6,7 @@ import { UrlDashboard } from "../router/url";
 
 function PublicGuard() {
   const isLoggedIn = useAuth();
+  // const isLoggedIn = true;
   console.log("isLoggedIn", isLoggedIn);
 
   return !isLoggedIn ? (
