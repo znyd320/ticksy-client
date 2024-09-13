@@ -12,7 +12,7 @@ function Header({ setOpen, open }: any) {
   // };
   return (
     <>
-      <div className="flex justify-between items-center py-[14.5px] pr-10 px-4 border-b w-full bg-[#F9FAFB]">
+      <div className="flex justify-between items-center py-[20.5px] pr-10 px-4 border-b w-full ">
         <div className="flex items-center gap-10">
           {!open && (
             <img
@@ -26,7 +26,12 @@ function Header({ setOpen, open }: any) {
           </button>
         </div>
 
-        <Avatar rounded />
+        {/* <Avatar rounded /> */}
+        <div className="avatar">
+          <div className="ring-primary ring-offset-base-100 w-4 rounded-full ring ">
+            <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+          </div>
+        </div>
       </div>
 
       {/* <div>

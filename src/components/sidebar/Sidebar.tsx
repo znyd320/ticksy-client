@@ -1,4 +1,4 @@
-import { Sidebar } from "flowbite-react";
+import { Dropdown, Sidebar } from "flowbite-react";
 import { ReactNode } from "react";
 import { FaSignOutAlt, FaTimes, FaUserCheck } from "react-icons/fa";
 import { HiMiniBanknotes } from "react-icons/hi2";
@@ -32,8 +32,6 @@ import {
 } from "../../router/url";
 import { TiTicket } from "react-icons/ti";
 import { SiKnowledgebase } from "react-icons/si";
-import { FcCustomerSupport } from "react-icons/fc";
-import { AiFillCustomerService } from "react-icons/ai";
 
 function CustomSidebar({ setOpen }: any) {
   const dispatch = useDispatch();
@@ -52,7 +50,7 @@ function CustomSidebar({ setOpen }: any) {
         aria-label="Sidebar with logo branding example"
         className="relative"
       >
-        <div className="flex gap-2 items-center border-b pb-2 mb-1">
+        <div className="flex gap-2 items-center border-b pb-3 mb-1">
           <img
             src="https://i.ibb.co/fMz0c1s/Vector.png"
             alt="logo"
