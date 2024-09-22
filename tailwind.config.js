@@ -8,7 +8,15 @@ export default {
     // "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        '8': '2rem',
+        '16': '4rem',
+        '24': '6rem',
+        '32': '8rem',
+        '40': '10rem',
+      }
+    },
   },
   plugins: [
     // flowbite,

@@ -29,7 +29,7 @@ const AddCategory = () => {
           <input
             type="text"
             placeholder="Category Name ..."
-            className="input input-bordered w-full text-gray-700 font-semibold"
+            className="input input-bordered w-full bg-white text-black font-semibold"
           />
         </div>
 
