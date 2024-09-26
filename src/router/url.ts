@@ -2,7 +2,11 @@ export const UrlDashboard = () => "/dashboard";
 export const UrlTickets = () => "/tickets";
 export const UrlCategory = () => "/category";
 export const UrlKnowledge = () => "/knowledge";
+
 export const UrlCustomers = () => "/customers";
+export const UrlViewCustomer = () => "/view-customer";
+export const UrlCustomerNote = () => "/customer-note";
+
 export const UrlManageAgent = () => "/manage-agent";
 export const UrlAnalytics = () => "/analytics";
 
