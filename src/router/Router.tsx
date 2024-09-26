@@ -3,7 +3,9 @@ import PublicGuard from "../guard/PublicGuard";
 import MainLayout from "../layouts/MainLayout";
 import Analytics from "../pages/Analytics/Analytics";
 import Category from "../pages/Category/Category";
+import CustomerNote from "../pages/Customers/CustomerNote";
 import Customers from "../pages/Customers/Customers";
+import ViewCustomer from "../pages/Customers/ViewCustomer";
 import Dashboard from "../pages/dashboard/Dashboard";
 import Knowledge from "../pages/Knowledge/Knowledge";
 import Login from "../pages/login/Login";
@@ -15,6 +17,7 @@ import Tickets from "../pages/Tickets/Tickets/Tickets";
 import {
   UrlAnalytics,
   UrlCategory,
+  UrlCustomerNote,
   UrlCustomers,
   UrlDashboard,
   UrlFinance,
@@ -27,6 +30,7 @@ import {
   UrlSettings,
   UrlTickets,
   UrlUser,
+  UrlViewCustomer,
 } from "./url";
 
 export const routerList = [
@@ -79,6 +83,14 @@ export const routerList = [
               {
                 path: UrlAnalytics(),
                 element: <Analytics />,
+              },
+              {
+                path: UrlViewCustomer(),
+                element: <ViewCustomer />,
+              },
+              {
+                path: UrlCustomerNote(),
+                element: <CustomerNote />,
               },
               {
                 path: UrlUser(),
