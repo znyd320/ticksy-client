@@ -1,6 +1,6 @@
-import lockKey from "../../assets/logos/lockKey.png";
-import ticketRight from "../../assets/logos/ticketRight.png";
-import tick from "../../assets/logos/tick.png";
+import lockKey from "../../assets/icons/lockKey.png";
+import ticketRight from "../../assets/icons/ticketRight.png";
+import tick from "../../assets/icons/tick.png";
 
 const ManageAgent = () => {
   return (
